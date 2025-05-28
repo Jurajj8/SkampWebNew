@@ -159,7 +159,7 @@ export default function Home() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8 items-center">
             {[
               { name: "Domov", href: "#home" },
               { name: "O nás", href: "#about" },
