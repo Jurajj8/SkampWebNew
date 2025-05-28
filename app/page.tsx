@@ -75,7 +75,7 @@ export default function Home() {
   ]
 
 
-  const galleryImages = [
+  /* const galleryImages = [
     {
       src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Pánsky strih 1",
@@ -108,7 +108,7 @@ export default function Home() {
       src: "https://images.unsplash.com/photo-1493256338651-d82f7272f427?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Holenie 2",
     },
-  ]
+  ] */
 
   const galleryVideos = [
     {
@@ -142,14 +142,20 @@ export default function Home() {
     <div className="relative bg-background text-foreground font-barber">
       {/* Navigation */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 mobile-safe-area ${
-          isScrolled ? "bg-background/95 backdrop-blur-md py-2 md:py-2 purple-glow" : "bg-transparent py-3 md:py-4"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-0 md:px-0
+        ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md py-3 md:py-4" : "bg-transparent py-3 md:py-6" } mobile-safe-area
+        `}
       >
         <div className="container mx-auto px-6 md:px-4 flex justify-between items-center">
           <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter text-accent relative group">
-            <span className="relative z-10 text-glow-sm md:text-glow">SKAMP</span>
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+            <Image
+              src="logo_white.png"
+              alt="SKAMP logo"
+              width={100}
+              height={100}
+              className="object-contain"
+              priority 
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -191,16 +197,15 @@ export default function Home() {
             >
               <div className="flex justify-between items-center mb-8">
                 <Link href="/" className="text-xl font-bold tracking-tighter text-accent text-glow-sm">
-                  SKAMP
+                  <Image
+                    src="logo_white.png"
+                    alt="SKAMP logo"
+                    width={100}
+                    height={100}
+                    className="object-contain"
+                    priority 
+                  />
                 </Link>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground"
-                >
-                  <X className="h-5 w-5" />
-                </Button>
               </div>
 
               <nav className="flex flex-col space-y-6">
