@@ -147,9 +147,9 @@ export default function Home() {
           <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {[
               { name: "Domov", href: "#home" },
+              { name: "O nás", href: "#about" },
               { name: "Služby", href: "#services" },
               { name: "Galéria", href: "#gallery" },
-              { name: "O nás", href: "#about" },
               { name: "Kontakt", href: "#contact" },
             ].map((item) => (
               <Link
@@ -161,7 +161,7 @@ export default function Home() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link href="/rezervacia">
+            <Link href="https://rezervacie.danielpollak.sk/">
               <Button className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 text-white text-sm lg:text-base px-4 lg:px-6">
                 Rezervovať
               </Button>
@@ -197,9 +197,9 @@ export default function Home() {
               <nav className="flex flex-col space-y-6">
                 {[
                   { name: "Domov", href: "#home" },
+                  { name: "O nás", href: "#about" },
                   { name: "Služby", href: "#services" },
                   { name: "Galéria", href: "#gallery" },
-                  { name: "O nás", href: "#about" },
                   { name: "Kontakt", href: "#contact" },
                 ].map((item) => (
                   <button
@@ -210,7 +210,7 @@ export default function Home() {
                     {item.name}
                   </button>
                 ))}
-                <Link href="/rezervacia" className="w-full pt-4">
+                <Link href="https://rezervacie.danielpollak.sk/" className="w-full pt-4">
                   <Button className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 w-full text-white py-3 text-lg">
                     Rezervovať termín
                   </Button>
@@ -229,7 +229,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="barber-bg1.jpg"
             alt="Barbershop pozadie"
             fill
             className="object-cover opacity-60"
@@ -352,11 +352,11 @@ export default function Home() {
                 className="relative z-10 rounded-lg overflow-hidden shadow-xl shadow-accent/10"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="profile.jpg"
                   alt="Daniel Polak - Majster holič"
-                  width={600}
-                  height={600}
-                  className="w-full h-auto"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover object-top rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-background to-transparent">
@@ -577,7 +577,7 @@ export default function Home() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Button
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-background text-xs md:text-sm px-3 md:px-4 py-2"
@@ -585,7 +585,7 @@ export default function Home() {
                     <span className="hidden sm:inline">Zobraziť detail</span>
                     <span className="sm:hidden">Detail</span>
                   </Button>
-                </div>
+                </div> */}
 
                 {/* Decorative corners */}
                 <div className="absolute top-0 left-0 w-6 h-6 md:w-10 md:h-10 border-t-2 border-l-2 border-accent/0 group-hover:border-accent transition-colors duration-300"></div>
@@ -594,7 +594,7 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div
+          {/* <motion.div
             className="mt-8 md:mt-12 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -610,7 +610,7 @@ export default function Home() {
                 Zobraziť celú galériu
               </Button>
             </Link>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
@@ -675,7 +675,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-sm md:text-base">Adresa</h4>
-                    <p className="text-foreground/80 text-sm md:text-base">Holičská 123, Centrum mesta, 10000</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Skalité 1007, 023 14 Skalité</p>
                   </div>
                 </motion.div>
 
@@ -691,7 +691,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-sm md:text-base">Telefón</h4>
-                    <p className="text-foreground/80 text-sm md:text-base">+421 900 123 456</p>
+                    <p className="text-foreground/80 text-sm md:text-base">+421 908 581 126</p>
                   </div>
                 </motion.div>
 
@@ -785,7 +785,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <Link href="/rezervacia" className="w-full block">
+                  <Link href="https://rezervacie.danielpollak.sk/" className="w-full block">
                     <Button className="w-full bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 py-4 md:py-6 text-base md:text-lg text-white shadow-lg shadow-accent/20">
                       Rezervovať termín
                     </Button>
@@ -883,11 +883,11 @@ export default function Home() {
               <ul className="space-y-3 md:space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-foreground/70 text-sm md:text-base">Holičská 123, Centrum mesta, 10000</span>
+                  <span className="text-foreground/70 text-sm md:text-base">Skalité 1007, 023 14 Skalité</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-foreground/70 text-sm md:text-base">+421 900 123 456</span>
+                  <span className="text-foreground/70 text-sm md:text-base">+421 908 581 126</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Clock className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
