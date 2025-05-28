@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, Clock, MapPin, Menu, Phone, Scissors, X } from "lucide-react"
+import { Calendar, Clock, MapPin, Menu, Phone, Scissors, X, Instagram } from "lucide-react"
+
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -42,48 +43,37 @@ export default function Home() {
 
   const services = [
     {
-      title: "Klasický strih",
-      description: "Tradičný strih s modernými technikami, vrátane umytia a stylingu.",
-      price: "25€",
-      duration: "45 min",
-      icon: <Scissors className="w-5 h-5 md:w-6 md:h-6 text-accent" />,
+      title: "Pánsky strih",
+      description: "Tradičný strih vlasov modernými technikami, umytie a styling v cene.",
+      price: "14 €",
+      duration: "40 min"
     },
     {
-      title: "Úprava brady",
-      description: "Precízne zastrihávanie a tvarovanie brady pre zvýraznenie vašich čŕt tváre.",
-      price: "15€",
-      duration: "20 min",
-      icon: <Scissors className="w-5 h-5 md:w-6 md:h-6 text-accent" />,
+      title: "Pánsky strih (<10 rokov)",
+      description: "Jemné a šetrné strihy pre deti do 10 rokov.",
+      price: "12 €",
+      duration: "30 min"
     },
     {
-      title: "Holenie s horúcim uterákom",
-      description: "Luxusné holenie britovou žiletkou s ošetrením horúcim uterákom.",
-      price: "30€",
-      duration: "40 min",
-      icon: <Scissors className="w-5 h-5 md:w-6 md:h-6 text-accent" />,
+      title: "Úprava brady + Hot Towel",
+      description: "Profesionálne zastrihnutie brady s horúcim uterákom na uvoľnenie pokožky.",
+      price: "15 €",
+      duration: "25 min"
     },
     {
-      title: "Strih a úprava brady",
-      description: "Kompletný balík zahŕňajúci strih vlasov a úpravu brady pre svieži vzhľad.",
-      price: "35€",
-      duration: "60 min",
-      icon: <Scissors className="w-5 h-5 md:w-6 md:h-6 text-accent" />,
+      title: "Strih + brada + Hot Towel",
+      description: "Kompletný balík: strih vlasov a úprava brady s horúcim uterákom.",
+      price: "23 €",
+      duration: "60 min"
     },
     {
-      title: "Detský strih",
-      description: "Jemné strihy pre deti do 12 rokov.",
-      price: "18€",
-      duration: "30 min",
-      icon: <Scissors className="w-5 h-5 md:w-6 md:h-6 text-accent" />,
-    },
-    {
-      title: "Styling vlasov",
-      description: "Profesionálny styling pre špeciálne príležitosti alebo každodenný vzhľad.",
-      price: "20€",
-      duration: "30 min",
-      icon: <Scissors className="w-5 h-5 md:w-6 md:h-6 text-accent" />,
+      title: "Strih + brada + farbenie fúzov",
+      description: "Komplexný servis vrátane farbenia fúzov podľa vášho želania.",
+      price: "30 €",
+      duration: "75 min"
     },
   ]
+
 
   const galleryImages = [
     {
@@ -119,6 +109,25 @@ export default function Home() {
       alt: "Holenie 2",
     },
   ]
+
+  const galleryVideos = [
+    {
+      src: "/video1.mp4",
+      alt: "Video z barber shopu 1",
+      placeholder: "/video1placeholder.png"
+    },
+    {
+      src: "/video2.mp4",
+      alt: "Video z barber shopu 2",
+      placeholder: "/video2placeholder.png"
+    },
+    {
+      src: "/video3.mp4",
+      alt: "Video z barber shopu 3",
+      placeholder: "/video3placeholder.png"
+    }
+  ]
+
 
   const handleMobileNavClick = (href: string) => {
     setIsMobileMenuOpen(false)
@@ -261,9 +270,9 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 tracking-tight leading-tight"
           >
-            <span className="block sm:inline">SKAMP</span>{" "}
-            <span className="text-accent text-glow-sm md:text-glow block sm:inline">BARBER</span>
-            <span className="block sm:inline">SHOP</span>
+            <span className="sm:inline">SKAMP</span>{" "}
+            <span className="text-accent text-glow-sm md:text-glow sm:inline">BARBER</span>
+            <span className="sm:inline">SHOP</span>
           </motion.h1>
 
           <motion.p
@@ -340,9 +349,9 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
+            className="grid md:grid-cols-4 gap-8 md:gap-12 items-center"
           >
-            <div className="relative order-2 md:order-1">
+            <div className="relative order-2 md:order-1 md:col-span-1 flex justify-center">
               <div className="absolute -top-4 -left-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-accent/30 to-pink-500/30 rounded-full blur-3xl"></div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -373,7 +382,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-1 md:order-2"
+              className="order-1 md:order-2 md:col-span-3 mr-2 ml-2"
             >
               <motion.h2
                 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6"
@@ -478,31 +487,24 @@ export default function Home() {
             </motion.p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-            {services.map((service, index) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {services.map((service, idx) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-background/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-border hover:border-accent/50 transition-all group hover:shadow-lg hover:shadow-accent/10"
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-background/20 backdrop-blur-md border border-border rounded-2xl shadow-lg p-6 flex flex-col hover:shadow-accent/20 transition-all group"
               >
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center mb-4 md:mb-6 group-hover:from-accent/30 group-hover:to-pink-500/30 transition-colors">
-                  {service.icon}
+                <h3 className="text-xl font-bold mb-2 text-foreground">{service.title}</h3>
+                <p className="text-foreground/80 mb-4 text-sm md:text-base">{service.description}</p>
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <span className="font-bold text-accent text-lg">{service.price}</span>
+                  <span className="text-foreground/70 text-sm md:text-base">{service.duration}</span>
                 </div>
-
-                <h3 className="text-lg md:text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-foreground/70 mb-4 text-sm md:text-base leading-relaxed">{service.description}</p>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-accent font-bold text-lg md:text-xl">{service.price}</span>
-                  <span className="text-foreground/70 flex items-center gap-1 text-sm md:text-base">
-                    <Clock className="w-3 h-3 md:w-4 md:h-4" /> {service.duration}
-                  </span>
-                </div>
-
-                <div className="w-0 h-0.5 bg-gradient-to-r from-accent to-pink-500 mt-4 transition-all duration-300 group-hover:w-full"></div>
+                {/* Gradientový progress bar pri hover */}
+                <div className="h-1 w-0 bg-gradient-to-r from-accent to-pink-500 mt-4 rounded-b-2xl transition-all duration-300 group-hover:w-full"></div>
               </motion.div>
             ))}
           </div>
@@ -514,7 +516,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Link href="/rezervacia">
+            <Link href="https://rezervacie.danielpollak.sk/">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 text-white shadow-lg shadow-accent/20 w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
@@ -527,7 +529,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-12 md:py-20 bg-background">
+      {/* <section id="gallery" className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-6 md:px-4 mobile-safe-area">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -577,42 +579,72 @@ export default function Home() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-background text-xs md:text-sm px-3 md:px-4 py-2"
-                  >
-                    <span className="hidden sm:inline">Zobraziť detail</span>
-                    <span className="sm:hidden">Detail</span>
-                  </Button>
-                </div> */}
-
-                {/* Decorative corners */}
                 <div className="absolute top-0 left-0 w-6 h-6 md:w-10 md:h-10 border-t-2 border-l-2 border-accent/0 group-hover:border-accent transition-colors duration-300"></div>
                 <div className="absolute bottom-0 right-0 w-6 h-6 md:w-10 md:h-10 border-b-2 border-r-2 border-accent/0 group-hover:border-accent transition-colors duration-300"></div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section> */}
 
-          {/* <motion.div
-            className="mt-8 md:mt-12 text-center"
+      <section id="gallery" className="py-12 md:py-20 bg-background">
+        <div className="container mx-auto px-6 md:px-4 mobile-safe-area">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 md:mb-16"
           >
-            <Link href="/rezervacia">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-accent text-accent hover:bg-gradient-to-r hover:from-accent hover:to-pink-500 hover:text-white w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+            >
+              Naša <span className="text-accent text-glow-sm md:text-glow">galéria</span>
+            </motion.h2>
+
+            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mx-auto mb-4 md:mb-6"></div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-foreground/80 max-w-2xl mx-auto text-sm md:text-base leading-relaxed px-4"
+            >
+              Pozrite si krátke videá z nášho barber shopu a zažite atmosféru priamo v pohybe.
+            </motion.p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {galleryVideos.map((video, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="relative group overflow-hidden rounded-lg aspect-square shadow-lg"
               >
-                Zobraziť celú galériu
-              </Button>
-            </Link>
-          </motion.div> */}
+                <video
+                  src={video.src}
+                  controls
+                  loop
+                  playsInline
+                  poster= {video.placeholder}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-0 left-0 w-6 h-6 md:w-10 md:h-10 border-t-2 border-l-2 border-accent/0 group-hover:border-accent transition-colors duration-300"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 md:w-10 md:h-10 border-b-2 border-r-2 border-accent/0 group-hover:border-accent transition-colors duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
+
 
       {/* Contact & Booking */}
       <section id="contact" className="py-12 md:py-20 bg-secondary relative">
@@ -723,20 +755,16 @@ export default function Home() {
               >
                 <h4 className="font-bold mb-4 text-sm md:text-base">Sledujte nás</h4>
                 <div className="flex gap-3 md:gap-4">
-                  {["facebook", "instagram", "twitter"].map((social, index) => (
-                    <Link
-                      key={social}
-                      href={`https://${social}.com`}
-                      target="_blank"
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center hover:from-accent/40 hover:to-pink-500/40 transition-colors"
-                    >
-                      <span className="sr-only">{social}</span>
-                      <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10z" />
-                      </svg>
-                    </Link>
-                  ))}
-                </div>
+                  <Link
+                  href="https://www.instagram.com/_danielpollak.skamp_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center hover:from-accent/40 hover:to-pink-500/40 transition-colors"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <Instagram className="w-5 h-5 md:w-6 md:h-6 text-accent" strokeWidth={1.8} />
+                </Link>
+              </div>
               </motion.div>
             </motion.div>
 
@@ -764,11 +792,11 @@ export default function Home() {
                 >
                   <div className="relative rounded-lg overflow-hidden">
                     <Image
-                      src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="barber-bg.jpg"
                       alt="Interiér barbershopu"
                       width={600}
                       height={400}
-                      className="w-full h-auto rounded-lg mb-4 md:mb-6"
+                      className="w-full h-auto rounded-lg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
@@ -799,7 +827,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  Alebo nás kontaktujte telefonicky na čísle +421 900 123 456
+                  Alebo nás kontaktujte telefonicky na čísle +421 908 581 126.
                 </motion.p>
               </div>
             </motion.div>
@@ -808,7 +836,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 md:py-12 bg-background border-t border-border">
+      <footer className="p-8 md:py-12 bg-background border-t border-border">
         <div className="container mx-auto px-6 md:px-4 mobile-safe-area">
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <motion.div
@@ -828,19 +856,15 @@ export default function Home() {
                 Prémiový barbershop poskytujúci kvalitné strihy a štýly pre moderného džentlmena.
               </p>
               <div className="flex gap-3 md:gap-4">
-                {["facebook", "instagram", "twitter"].map((social) => (
                   <Link
-                    key={social}
-                    href={`https://${social}.com`}
-                    target="_blank"
-                    className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center hover:from-accent/40 hover:to-pink-500/40 transition-colors"
-                  >
-                    <span className="sr-only">{social}</span>
-                    <svg className="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10z" />
-                    </svg>
-                  </Link>
-                ))}
+                  href="https://www.instagram.com/_danielpollak.skamp_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center hover:from-accent/40 hover:to-pink-500/40 transition-colors"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <Instagram className="w-5 h-5 md:w-6 md:h-6 text-accent" strokeWidth={1.8} />
+                </Link>
               </div>
             </motion.div>
 
