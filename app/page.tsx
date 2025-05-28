@@ -112,19 +112,19 @@ export default function Home() {
 
   const galleryVideos = [
     {
-      src: "/video1.mp4",
+      src: "video1.mp4",
       alt: "Video z barber shopu 1",
-      placeholder: "/video1placeholder.png"
+      placeholder: "video1placeholder.png"
     },
     {
-      src: "/video2.mp4",
+      src: "video2.mp4",
       alt: "Video z barber shopu 2",
-      placeholder: "/video2placeholder.png"
+      placeholder: "video2placeholder.png"
     },
     {
-      src: "/video3.mp4",
+      src: "video3.mp4",
       alt: "Video z barber shopu 3",
-      placeholder: "/video3placeholder.png"
+      placeholder: "video3placeholder.png"
     }
   ]
 
