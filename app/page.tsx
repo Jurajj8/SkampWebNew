@@ -44,31 +44,31 @@ export default function Home() {
   const services = [
     {
       title: "Pánsky strih",
-      description: "Tradičný strih vlasov modernými technikami, umytie a styling v cene.",
+      description: "Klasika v modernom prevedení – strih, umytie aj styling v cene.",
       price: "14 €",
       duration: "40 min"
     },
     {
       title: "Pánsky strih (<10 rokov)",
-      description: "Jemné a šetrné strihy pre deti do 10 rokov.",
+      description: "Šetrné a štýlové strihy pre malých gentlemanov do 10 rokov.",
       price: "12 €",
       duration: "30 min"
     },
     {
       title: "Úprava brady + Hot Towel",
-      description: "Profesionálne zastrihnutie brady s horúcim uterákom na uvoľnenie pokožky.",
+      description: "Starostlivosť o bradu s horúcim uterákom, ktorý zjemní pokožku a pripraví na dokonalý strih.",
       price: "15 €",
       duration: "25 min"
     },
     {
-      title: "Strih + brada + Hot Towel",
-      description: "Kompletný balík: strih vlasov a úprava brady s horúcim uterákom.",
+      title: "Strih + Úprava brady + Hot Towel",
+      description: "Od hlavy po bradu – profesionálny strih a úprava s uvoľňujúcim horúcim uterákom.",
       price: "23 €",
       duration: "60 min"
     },
     {
       title: "Strih + brada + farbenie fúzov",
-      description: "Komplexný servis vrátane farbenia fúzov podľa vášho želania.",
+      description: "Od precízneho strihu až po dokonalý odtieň – full servis pre náročných.",
       price: "30 €",
       duration: "75 min"
     },
@@ -286,7 +286,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 max-w-2xl mx-auto text-foreground/80 px-4"
           >
-            Prémiové strihy a štýly pre moderného džentlmena
+            Miesto, kde vlasy a brada dostanú presne to, čo si zaslúžia.
           </motion.p>
 
           <motion.div
@@ -375,8 +375,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-background to-transparent">
                   <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mb-2"></div>
-                  <h3 className="text-lg md:text-xl font-bold text-white">Daniel Polak</h3>
-                  <p className="text-white/80 text-sm">Majster holič & Zakladateľ</p>
+                  <h3 className="text-lg md:text-xl font-bold text-white">Daniel Pollák</h3>
+                  <p className="text-white/80 text-sm">Zakladateľ & Barber</p>
                 </div>
               </motion.div>
               <div className="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-tl from-accent/30 to-pink-500/30 rounded-full blur-3xl"></div>
@@ -396,7 +396,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                Spoznajte <span className="text-accent text-glow-sm md:text-glow">Daniela Polaka</span>
+                Spoznajte <span className="text-accent text-glow-sm md:text-glow">Daniela Polláka</span>
               </motion.h2>
 
               <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mb-4 md:mb-6"></div>
@@ -408,9 +408,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                S viac ako 6-ročnými skúsenosťami Daniel zdokonaľuje svoje remeslo a posúva hranice tradičného
-                holičstva. Jeho vášeň pre neustále vzdelávanie ho priviedla k účasti na mnohých kurzoch a workshopoch po
-                celom svete.
+                S viac než 6 rokmi skúseností za strojčekom Daniel neustále posúva hranice klasického barberského remesla. Vzdelával sa na workshopoch po celom svete a svoju vášeň pretavil do precíznosti, ktorú cítiš pri každom strihu. 
               </motion.p>
 
               <motion.p
@@ -420,8 +418,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                V Skamp Barbershope veríme, že strih vlasov nie je len služba, ale zážitok. Daniel kombinuje tradičné
-                techniky s modernými štýlmi, aby vytvoril vzhľad, ktorý je jedinečne prispôsobený každému klientovi.
+                V Skamp Barbershope veríme, že účes nie je len rutina – je to osobný zážitok. Daniel spája to najlepšie z tradičných techník a moderných trendov, aby vytvoril štýl, ktorý sedí práve tebe. 
               </motion.p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -487,8 +484,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-foreground/80 max-w-2xl mx-auto text-sm md:text-base leading-relaxed px-4"
             >
-              Ponúkame širokú škálu prémiových služieb, aby ste vyzerali čo najlepšie. Každá služba zahŕňa konzultáciu,
-              aby sme dosiahli váš požadovaný štýl.
+              Prémiová starostlivosť, presne podľa teba. Každý strih začína konzultáciou, končí maximálnou spokojnosťou.
             </motion.p>
           </motion.div>
 
@@ -620,7 +616,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-foreground/80 max-w-2xl mx-auto text-sm md:text-base leading-relaxed px-4"
             >
-              Pozrite si krátke videá z nášho barber shopu a zažite atmosféru priamo v pohybe.
+              Chceš vedieť, ako to u nás žije? Mrkni na videá a nechaj sa vtiahnuť do atmosféry Skampu.
             </motion.p>
           </motion.div>
 
@@ -684,7 +680,8 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-foreground/80 max-w-2xl mx-auto text-sm md:text-base leading-relaxed px-4"
             >
-              Ste pripravení na nový vzhľad? Rezervujte si termín ešte dnes a zažite rozdiel v Skamp Barbershope.
+              Nečakaj na dokonalý moment – vytvor si ho u nás.
+              Objednaj sa ešte dnes.
             </motion.p>
           </motion.div>
 
