@@ -44,7 +44,7 @@ export default function Home() {
   const services = [
     {
       title: "Pánsky strih",
-      description: "Klasika v modernom prevedení – strih, umytie aj styling v cene.",
+      description: "Klasika v modernom prevedení – strih aj styling v cene.",
       price: "14 €",
       duration: "30 min"
     },
@@ -376,7 +376,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-background to-transparent">
                   <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mb-2"></div>
                   <h3 className="text-lg md:text-xl font-bold text-white">Daniel Pollák</h3>
-                  <p className="text-white/80 text-sm">Zakladateľ & Barber</p>
+                  <p className="text-white/80 text-sm">Barber</p>
                 </div>
               </motion.div>
               <div className="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-tl from-accent/30 to-violet-500/30 rounded-full blur-3xl"></div>
@@ -824,7 +824,7 @@ export default function Home() {
                   </Link>
                 </motion.div>
 
-                <motion.p
+                {/* <motion.p
                   className="text-foreground/70 text-center text-xs md:text-sm mt-4"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -832,7 +832,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   Alebo nás kontaktujte telefonicky na čísle +421 908 581 126.
-                </motion.p>
+                </motion.p> */}
               </div>
             </motion.div>
           </div>
@@ -857,7 +857,7 @@ export default function Home() {
               </Link>
               <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-3 md:mb-4"></div>
               <p className="text-foreground/70 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
-                Prémiový barbershop poskytujúci kvalitné strihy a štýly pre moderného džentlmena.
+                Prémiový barbershop poskytujúci kvalitné strihy a štýly pre moderného gentlmena.
               </p>
               <div className="flex gap-3 md:gap-4">
                   <Link
@@ -913,10 +913,10 @@ export default function Home() {
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
                   <span className="text-foreground/70 text-sm md:text-base">Skalité 1007, 023 14 Skalité</span>
                 </li>
-                <li className="flex items-start gap-3">
+                {/* <li className="flex items-start gap-3">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
                   <span className="text-foreground/70 text-sm md:text-base">+421 908 581 126</span>
-                </li>
+                </li> */}
                   {/* <div>
                     <h4 className="font-bold mb-1 text-sm md:text-base">Otváracie hodiny</h4>
                     <p className="text-foreground/80 text-sm md:text-base">Pondelok - 10:00 – 12:00, 15:00 – 16:30</p>
