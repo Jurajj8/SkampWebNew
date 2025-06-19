@@ -46,7 +46,7 @@ export default function Home() {
       title: "Pánsky strih",
       description: "Klasika v modernom prevedení – strih, umytie aj styling v cene.",
       price: "14 €",
-      duration: "40 min"
+      duration: "30 min"
     },
     {
       title: "Pánsky strih (<10 rokov)",
@@ -70,7 +70,7 @@ export default function Home() {
       title: "Strih + brada + farbenie fúzov",
       description: "Od precízneho strihu až po dokonalý odtieň – full servis pre náročných.",
       price: "30 €",
-      duration: "75 min"
+      duration: "60 min"
     },
   ]
 
@@ -173,11 +173,11 @@ export default function Home() {
                 className="font-medium hover:text-accent transition-colors relative group text-sm lg:text-base"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-violet-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             <Link href="https://rezervacie.danielpollak.sk/">
-              <Button className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 text-white text-sm lg:text-base px-4 lg:px-6">
+              <Button className="bg-gradient-to-r from-accent to-violet-500 hover:from-accent/90 hover:to-violet-500/90 text-white text-sm lg:text-base px-4 lg:px-6">
                 Rezervovať
               </Button>
             </Link>
@@ -225,7 +225,7 @@ export default function Home() {
                   </button>
                 ))}
                 <Link href="https://rezervacie.danielpollak.sk/" className="w-full pt-4">
-                  <Button className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 w-full text-white py-3 text-lg">
+                  <Button className="bg-gradient-to-r from-accent to-violet-500 hover:from-accent/90 hover:to-violet-500/90 w-full text-white py-3 text-lg">
                     Rezervovať termín
                   </Button>
                 </Link>
@@ -250,7 +250,7 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-pink-500/20 opacity-30 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-violet-500/20 opacity-30 mix-blend-overlay"></div>
         </div>
 
         <motion.div
@@ -263,7 +263,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="relative inline-block mb-6 md:mb-8"
           >
-            <div className="absolute -inset-2 md:-inset-4 rounded-full bg-gradient-to-r from-accent/30 to-pink-500/30 blur-xl"></div>
+            <div className="absolute -inset-2 md:-inset-4 rounded-full bg-gradient-to-r from-accent/30 to-violet-500/30 blur-xl"></div>
             <div className="relative z-10 p-1.5 md:p-2 rounded-full border-2 border-accent/50">
               <Scissors className="w-12 h-12 md:w-16 md:h-16 text-accent" />
             </div>
@@ -298,7 +298,7 @@ export default function Home() {
             <Link href="/rezervacia">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 text-white shadow-lg shadow-accent/20 w-full sm:w-auto"
+                className="bg-gradient-to-r from-accent to-violet-500 hover:from-accent/90 hover:to-violet-500/90 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 text-white shadow-lg shadow-accent/20 w-full sm:w-auto"
               >
                 Rezervovať termín
               </Button>
@@ -336,7 +336,7 @@ export default function Home() {
       </section>
 
       {/* Stylish Divider */}
-      <div className="relative h-12 md:h-16 bg-gradient-to-r from-accent to-pink-500 overflow-hidden">
+      <div className="relative h-12 md:h-16 bg-gradient-to-r from-accent to-violet-500 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYtMi42ODYgNi02cy0yLjY4Ni02LTYtNmMtMy4zMTQgMC02IDIuNjg2LTYgNnMyLjY4NiA2IDYgNnptMTIgMTJjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTZjLTMuMzE0IDAtNiAyLjY4Ni02IDZzMi42ODYgNiA2IDZ6bTEyIDEyYzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02Yy0zLjMxNCAwLTYgMi42ODYtNiA2czIuNjg2IDYgNiA2ek0xMiA0MmMzLjMxNCAwIDYtMi42ODYgNi02cy0yLjY4Ni02LTYtNmMtMy4zMTQgMC02IDIuNjg2LTYgNnMyLjY4NiA2IDYgNnptMC0xMmMzLjMxNCAwIDYtMi42ODYgNi02cy0yLjY4Ni02LTYtNmMtMy4zMTQgMC02IDIuNjg2LTYgNnMyLjY4NiA2IDYgNnptMjQgMGMzLjMxNCAwIDYtMi42ODYgNi02cy0yLjY4Ni02LTYtNmMtMy4zMTQgMC02IDIuNjg2LTYgNnMyLjY4NiA2IDYgNnoiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLW9wYWNpdHk9Ii4yIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         <div className="container mx-auto px-6 md:px-4 h-full flex items-center justify-center mobile-safe-area">
           <div className="text-white text-sm sm:text-base md:text-xl lg:text-2xl font-bold tracking-wider uppercase text-center">
@@ -357,7 +357,7 @@ export default function Home() {
             className="grid md:grid-cols-4 gap-8 md:gap-12 items-center"
           >
             <div className="relative order-2 md:order-1 md:col-span-1 flex justify-center">
-              <div className="absolute -top-4 -left-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-accent/30 to-pink-500/30 rounded-full blur-3xl"></div>
+              <div className="absolute -top-4 -left-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-accent/30 to-violet-500/30 rounded-full blur-3xl"></div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -374,12 +374,12 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-background to-transparent">
-                  <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mb-2"></div>
+                  <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mb-2"></div>
                   <h3 className="text-lg md:text-xl font-bold text-white">Daniel Pollák</h3>
                   <p className="text-white/80 text-sm">Zakladateľ & Barber</p>
                 </div>
               </motion.div>
-              <div className="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-tl from-accent/30 to-pink-500/30 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-tl from-accent/30 to-violet-500/30 rounded-full blur-3xl"></div>
             </div>
 
             <motion.div
@@ -399,7 +399,7 @@ export default function Home() {
                 Spoznajte <span className="text-accent text-glow-sm md:text-glow">Daniela Polláka</span>
               </motion.h2>
 
-              <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mb-4 md:mb-6"></div>
+              <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mb-4 md:mb-6"></div>
 
               <motion.p
                 className="text-foreground/80 mb-4 md:mb-6 text-sm md:text-base leading-relaxed"
@@ -429,7 +429,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center">
                     <Scissors className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                   </div>
                   <span className="text-sm md:text-base">6+ rokov skúseností</span>
@@ -442,7 +442,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center">
                     <Calendar className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                   </div>
                   <span className="text-sm md:text-base">Profesionálne školenia</span>
@@ -475,7 +475,7 @@ export default function Home() {
               Naše <span className="text-accent text-glow-sm md:text-glow">služby</span>
             </motion.h2>
 
-            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mx-auto mb-4 md:mb-6"></div>
+            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mx-auto mb-4 md:mb-6"></div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -505,7 +505,7 @@ export default function Home() {
                   <span className="text-foreground/70 text-sm md:text-base">{service.duration}</span>
                 </div>
                 {/* Gradientový progress bar pri hover */}
-                <div className="h-1 w-0 bg-gradient-to-r from-accent to-pink-500 mt-4 rounded-b-2xl transition-all duration-300 group-hover:w-full"></div>
+                <div className="h-1 w-0 bg-gradient-to-r from-accent to-violet-500 mt-4 rounded-b-2xl transition-all duration-300 group-hover:w-full"></div>
               </motion.div>
             ))}
           </div>
@@ -520,7 +520,7 @@ export default function Home() {
             <Link href="https://rezervacie.danielpollak.sk/">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 text-white shadow-lg shadow-accent/20 w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
+                className="bg-gradient-to-r from-accent to-violet-500 hover:from-accent/90 hover:to-violet-500/90 text-white shadow-lg shadow-accent/20 w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
               >
                 Zobraziť všetky služby
               </Button>
@@ -549,7 +549,7 @@ export default function Home() {
               Naša <span className="text-accent text-glow-sm md:text-glow">galéria</span>
             </motion.h2>
 
-            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mx-auto mb-4 md:mb-6"></div>
+            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mx-auto mb-4 md:mb-6"></div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -607,7 +607,7 @@ export default function Home() {
               Naša <span className="text-accent text-glow-sm md:text-glow">galéria</span>
             </motion.h2>
 
-            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mx-auto mb-4 md:mb-6"></div>
+            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mx-auto mb-4 md:mb-6"></div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -671,7 +671,7 @@ export default function Home() {
               Kontaktujte <span className="text-accent text-glow-sm md:text-glow">nás</span>
             </motion.h2>
 
-            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-pink-500 mx-auto mb-4 md:mb-6"></div>
+            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-accent to-violet-500 mx-auto mb-4 md:mb-6"></div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -694,7 +694,7 @@ export default function Home() {
               className="bg-background/10 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border shadow-lg shadow-accent/5"
             >
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Kontaktné informácie</h3>
-              <div className="w-12 h-1 bg-gradient-to-r from-accent to-pink-500 mb-4 md:mb-6"></div>
+              <div className="w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-4 md:mb-6"></div>
 
               <div className="space-y-4 md:space-y-6">
                 <motion.div
@@ -704,7 +704,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                   </div>
                   <div>
@@ -720,7 +720,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                   </div>
                   <div>
@@ -736,14 +736,16 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center shrink-0">
                     <Clock className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-sm md:text-base">Otváracie hodiny</h4>
-                    <p className="text-foreground/80 text-sm md:text-base">Pondelok - Piatok: 9:00 - 19:00</p>
-                    <p className="text-foreground/80 text-sm md:text-base">Sobota: 10:00 - 16:00</p>
-                    <p className="text-foreground/80 text-sm md:text-base">Nedeľa: Zatvorené</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Pondelok - 10:00 – 12:00, 15:00 – 16:30</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Utorok - 10:00 – 12:30, 15:30 – 17:00</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Štvrtok - 09:00 – 12:00, 15:30 – 17:00</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Piatok - 09:00 – 12:30, 13:30 – 14:30</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Streda, Sobota a Nedeľa - Zatvorené</p>
                   </div>
                 </motion.div>
               </div>
@@ -761,7 +763,7 @@ export default function Home() {
                   href="https://www.instagram.com/_danielpollak.skamp_/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center hover:from-accent/40 hover:to-pink-500/40 transition-colors"
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center hover:from-accent/40 hover:to-violet-500/40 transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   <Instagram className="w-5 h-5 md:w-6 md:h-6 text-accent" strokeWidth={1.8} />
@@ -778,7 +780,7 @@ export default function Home() {
               className="bg-background/10 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border shadow-lg shadow-accent/5"
             >
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Rezervácia termínu</h3>
-              <div className="w-12 h-1 bg-gradient-to-r from-accent to-pink-500 mb-4 md:mb-6"></div>
+              <div className="w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-4 md:mb-6"></div>
 
               <p className="text-foreground/80 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                 Chcete si rezervovať termín? Kliknite na tlačidlo nižšie a budete presmerovaní na našu rezervačnú
@@ -802,7 +804,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                      <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-pink-500 mb-2"></div>
+                      <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-2"></div>
                       <h4 className="text-base md:text-lg font-bold text-white">Moderné priestory</h4>
                       <p className="text-white/80 text-xs md:text-sm">Príjemné prostredie pre váš dokonalý strih</p>
                     </div>
@@ -816,7 +818,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <Link href="https://rezervacie.danielpollak.sk/" className="w-full block">
-                    <Button className="w-full bg-gradient-to-r from-accent to-pink-500 hover:from-accent/90 hover:to-pink-500/90 py-4 md:py-6 text-base md:text-lg text-white shadow-lg shadow-accent/20">
+                    <Button className="w-full bg-gradient-to-r from-accent to-violet-500 hover:from-accent/90 hover:to-violet-500/90 py-4 md:py-6 text-base md:text-lg text-white shadow-lg shadow-accent/20">
                       Rezervovať termín
                     </Button>
                   </Link>
@@ -853,7 +855,7 @@ export default function Home() {
               >
                 SKAMP
               </Link>
-              <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-pink-500 mb-3 md:mb-4"></div>
+              <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-3 md:mb-4"></div>
               <p className="text-foreground/70 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                 Prémiový barbershop poskytujúci kvalitné strihy a štýly pre moderného džentlmena.
               </p>
@@ -862,7 +864,7 @@ export default function Home() {
                   href="https://www.instagram.com/_danielpollak.skamp_/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-pink-500/20 flex items-center justify-center hover:from-accent/40 hover:to-pink-500/40 transition-colors"
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-violet-500/20 flex items-center justify-center hover:from-accent/40 hover:to-violet-500/40 transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   <Instagram className="w-5 h-5 md:w-6 md:h-6 text-accent" strokeWidth={1.8} />
@@ -877,13 +879,13 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4">Rýchle odkazy</h4>
-              <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-pink-500 mb-3 md:mb-4"></div>
+              <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-3 md:mb-4"></div>
               <ul className="space-y-2">
                 {[
                   { name: "Domov", href: "#home" },
+                  { name: "O nás", href: "#about" },
                   { name: "Služby", href: "#services" },
                   { name: "Galéria", href: "#gallery" },
-                  { name: "O nás", href: "#about" },
                   { name: "Kontakt", href: "#contact" },
                 ].map((item) => (
                   <li key={item.name}>
@@ -905,7 +907,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4">Kontaktujte nás</h4>
-              <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-pink-500 mb-3 md:mb-4"></div>
+              <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-accent to-violet-500 mb-3 md:mb-4"></div>
               <ul className="space-y-3 md:space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
@@ -915,10 +917,14 @@ export default function Home() {
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
                   <span className="text-foreground/70 text-sm md:text-base">+421 908 581 126</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Clock className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-foreground/70 text-sm md:text-base">Po-Pi: 9:00 - 19:00</span>
-                </li>
+                  {/* <div>
+                    <h4 className="font-bold mb-1 text-sm md:text-base">Otváracie hodiny</h4>
+                    <p className="text-foreground/80 text-sm md:text-base">Pondelok - 10:00 – 12:00, 15:00 – 16:30</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Utorok - 10:00 – 12:30, 15:30 – 17:00</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Štvrtok - 09:00 – 12:00, 15:30 – 17:00</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Piatok - 09:00 – 12:30, 13:30 – 14:30</p>
+                    <p className="text-foreground/80 text-sm md:text-base">Streda, Sobota a Nedeľa - Zatvorené</p>
+                  </div> */}
               </ul>
             </motion.div>
           </div>

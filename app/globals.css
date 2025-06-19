@@ -36,6 +36,13 @@
   }
 }
 
+body {
+ max-width: 100%;
+}
+
+html {
+  max-width: 100%;
+}
 @layer base {
   * {
     @apply border-border;
